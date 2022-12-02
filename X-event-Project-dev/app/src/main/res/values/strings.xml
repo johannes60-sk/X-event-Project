@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">arroundMe</string>
+
+    <string name="facebook_app_id">1135575517070710</string>
+    <string name="fb_login_protocol_scheme">fb1135575517070710</string>
+    <string name="facebook_client_token">aaa7478eb931465b72ce322a689be3d2</string>
+
+
+</resources>

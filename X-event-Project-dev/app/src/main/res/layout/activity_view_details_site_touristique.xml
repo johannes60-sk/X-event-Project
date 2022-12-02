@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view_details_site_touristique">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".view_details_site_touristique">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:cardElevation="80dp"
+        android:background="@color/white"
+        app:cardCornerRadius="50dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_view_detail_site_touristque"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/chateaux"
+                android:scaleType="centerCrop"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/back______"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="Chateau de Vincennes"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"/>
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawerLayout"
+        android:layout_width="121dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="-5dp"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/shape"
+        android:backgroundTint="#C778DD">
+
+        <TextView
+            android:id="@+id/categorie_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Chateau"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape"
+        android:backgroundTint="#D9D9D9"
+        android:orientation="horizontal">
+
+        <androidx.drawerlayout.widget.DrawerLayout
+            android:layout_width="121dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/shape"
+            android:backgroundTint="#C778DD">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Histoire"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+        </androidx.drawerlayout.widget.DrawerLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:gravity="center"
+            android:text="Anecdote"
+            android:textColor="#4E4949"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:gravity="center"
+            android:text="Info"
+            android:textColor="#4E4949"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:gravity="center"
+            android:text="Contact"
+            android:textColor="#4E4949"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/shape"
+        android:backgroundTint="#D9D9D9"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:maxLines="4"
+            android:textStyle="bold"
+            android:text="Le lorem ipsum est, en imprimerie, une suite de mots
+            Le lorem ipsum est,en imprimerie, une suite de mots Le lorem ipsum
+            est, en imprimerie, une suite de mots Le lorem ipsum est, en
+            imprimerie une suite de mots"/>
+
+        <TextView
+            android:id="@+id/btnVoirPlus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Voir plus"
+            android:layout_gravity="end"
+            android:layout_marginRight="10dp"
+            android:textStyle="bold"
+            android:textColor="#C778DD"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:text="Les incontournables de la region"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="174dp"
+            android:layout_margin="8dp"
+            android:columnCount="4"
+            android:rowCount="4">
+
+            <!-- CARD 1-->
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="200dp"
+                android:layout_height="170dp"
+                android:layout_row="1"
+                android:layout_column="1"
+                android:layout_margin="4dp"
+                android:backgroundTint="#282C33"
+                app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="135dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/chateaux" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-black"
+                        android:text="Chateaux"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="25sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- CARD 2-->
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="200dp"
+                android:layout_height="170dp"
+                android:layout_row="1"
+                android:layout_column="2"
+                android:layout_margin="4dp"
+                android:backgroundTint="#282C33"
+                app:cardCornerRadius="8dp">>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="135dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/chateaux" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-black"
+                        android:text="Chateaux"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="25sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+        </GridLayout>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            app:itemTextColor="@color/black"
+            app:menu="@menu/bottom_nav_menu">
+
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
+    </LinearLayout>
+
+</ScrollView>
