@@ -3,9 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission
-        android:name="com.google.android.gms.permission.AD_ID"
-        tools:node="remove" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+<!--    <uses-permission-->
+<!--        android:name="com.google.android.gms.permission.AD_ID"-->
+<!--        tools:node="remove" />-->
 
     <application
         android:allowBackup="true"
@@ -17,6 +19,39 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ArroundMe"
         tools:targetApi="31">
+
+        <activity
+            android:name=".maps.MapsActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+
+            <meta-data
+                android:name="com.google.android.gms.version"
+                android:value="@integer/google_play_services_version" />
+
+
+        </activity>
+        <!--
+             TODO: Before you run your application, you need a Google Maps API key.
+
+             To get one, follow the directions here:
+
+                https://developers.google.com/maps/documentation/android-sdk/get-api-key
+
+             Once you have your API key (it starts with "AIza"), define a new property in your
+             project's local.properties file (e.g. MAPS_API_KEY=Aiza...), and replace the
+             "YOUR_API_KEY" string in this file with "${MAPS_API_KEY}".
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="${MAPS_API_KEY}"/>
+
+        <activity
+            android:name=".NearbyPlacesOfCurrentLocation"
+            android:exported="false"
+            android:label="@string/title_activity_nearby_places_of_current_location" />
         <activity
             android:name=".EventLandingPage"
             android:exported="false">
@@ -26,20 +61,6 @@
         </activity>
         <activity
             android:name=".EventHomePage"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".Event_hompage"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".landing_page_event"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -63,7 +84,7 @@
         <activity
             android:name="com.facebook.FacebookActivity"
             android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
-            android:label="@string/app_name" />
+            android:value="@string/app_name" />
         <activity
             android:name="com.facebook.CustomTabActivity"
             android:exported="true">
@@ -73,9 +94,6 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
-                <!-- .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | -->
-                <!-- Intent.FLAG_ACTIVITY_REQUIRE_NON_BROWSER) -->
-                <!-- <data android:scheme="@string/fb_login_protocol_scheme" /> -->
                 <data android:scheme="@string/fb_login_protocol_scheme" />
             </intent-filter>
         </activity> <!-- FIN -->

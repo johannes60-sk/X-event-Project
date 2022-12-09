@@ -30,4 +30,5 @@ public class EventLandingPage extends AppCompatActivity {
             }
         });
     }
+
 }

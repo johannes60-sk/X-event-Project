@@ -84,13 +84,13 @@ public class list_view_site_touriste extends AppCompatActivity {
                         .into(holder.circleImageView);
                 holder.categorie_name.setText(model.getCategorie_name());
 
-                holder.categorieDrawer.setOnClickListener(new View.OnClickListener() {
+                holder.drawerItem.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
                         Intent intent = new Intent(list_view_site_touriste.this, view_details_site_touristique.class);
                         intent.putExtra("name", model.getName());
-                        intent.putExtra("image", model.getThumb_image());
                         intent.putExtra("categorie_name", model.getCategorie_name());
+                        intent.putExtra("thumb_image", model.getThumb_image());
                         startActivity(intent);
                     }
                 });

@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".ConnectionWithFacebook">
 
-
     <ImageView
         android:id="@+id/mLogo"
         android:layout_width="110dp"

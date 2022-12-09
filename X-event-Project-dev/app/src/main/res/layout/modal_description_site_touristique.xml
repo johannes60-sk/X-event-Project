@@ -63,7 +63,7 @@
             android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/iv_view_detail_site_touristque"
+                android:id="@+id/iv_modal_view_detail_site_touristique"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:src="@drawable/chateaux"
@@ -100,6 +100,7 @@
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/source"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"

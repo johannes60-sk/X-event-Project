@@ -16,10 +16,9 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class ViewHolder extends RecyclerView.ViewHolder {
 
-    public TextView place_name;
-    public TextView distance;
+    public TextView place_name, distance;
     public TextView categorie_name;
-    public ConstraintLayout categorieDrawer;
+    public ConstraintLayout drawerItem;
     public CircleImageView circleImageView;
     public ImageView iv_view_detail_site_touristque;
 
@@ -27,7 +26,7 @@ public class ViewHolder extends RecyclerView.ViewHolder {
         super(itemView);
 
         place_name = itemView.findViewById(R.id.place_name);
-        categorieDrawer = itemView.findViewById(R.id.drawerItem);
+        drawerItem = itemView.findViewById(R.id.drawerItem);
         categorie_name = itemView.findViewById(R.id.categorie_name);
         distance = itemView.findViewById(R.id.distance);
         circleImageView = itemView.findViewById(R.id.circleImageView);

@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
@@ -65,54 +66,56 @@ public class view_details_site_touristique extends AppCompatActivity {
 
         Bundle extras = getIntent().getExtras();
 
-        if(extras.getString("name") != null){
+        if(extras.getString("categorie_name") != null){
 
-            readDataFromFirebase(extras.getString("name"), "info_site_touristique_chateau");
+                categorie_name.setText(extras.getString("categorie_name"));
+                title.setText(extras.getString("name"));
+                Glide.with(view_details_site_touristique.this)
+                    .load(extras.getString("thumb_image"))
+                    .into(iv_view_detail_site_touristque);
         }
 
         btnVoirPlus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 bottomSheetDialog = new BottomSheetDialog(view_details_site_touristique.this,R.style.BottomSheetTheme);
-                View sheetView = LayoutInflater.from(getApplicationContext()).inflate(R.layout.bottom_modal_description_site_touristique,null);
+                View sheetView = LayoutInflater.from(getApplicationContext()).inflate(R.layout.modal_description_site_touristique,null);
 
                 bottomSheetDialog.setContentView(sheetView);
                 bottomSheetDialog.show();
             }
         });
-
-
-
     }
 
-    public void readDataFromFirebase(String name, String collection){
-
-        FirebaseFirestore db = FirebaseFirestore.getInstance();
-
-        db.collection(collection)
-                .whereEqualTo("name",name)
-                .get()
-                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-                    @Override
-                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                        if (task.isSuccessful()) {
-                            for (QueryDocumentSnapshot document : task.getResult()) {
-                                Log.d(TAG, document.getId() + " => " + document.getData());
-
-                                title.setText(document.get("name").toString());
-
-                                Glide.with(view_details_site_touristique.this)
-                                        .load(document.get("thumb_image"))
-                                        .into(iv_view_detail_site_touristque);
-
-                                categorie_name.setText(document.get("categorie_name").toString());
-
-                            }
-                        } else {
-                            Log.w(TAG, "Error getting documents.", task.getException());
-                        }
-                    }
-                });
-    }
+//    public void readDataFromFirebase(String name, String collection){
+//
+//        FirebaseFirestore db = FirebaseFirestore.getInstance();
+//
+//        db.collection(collection)
+//                .whereEqualTo("categorie_name",name)
+//                .get()
+//                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+//                    @Override
+//                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+//                        if (task.isSuccessful()) {
+//                            for (QueryDocumentSnapshot document : task.getResult()) {
+//                                Log.d(TAG, document.getId() + " => " + document.getData());
+//
+//                                title.setText(document.get("name").toString());
+//
+//                                Glide.with(view_details_site_touristique.this)
+//                                        .load(document.get("thumb_image"))
+//                                        .into(iv_view_detail_site_touristque);
+//
+////                                categorie_name.setText(document.get("categorie_name").toString());
+//
+//                            }
+//                        } else {
+//                            Log.w(TAG, "Error getting documents.", task.getException());
+//                        }
+//                    }
+//                });
+//    }
 
 }

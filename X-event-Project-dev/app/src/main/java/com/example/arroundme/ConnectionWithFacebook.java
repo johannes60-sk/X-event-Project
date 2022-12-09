@@ -83,11 +83,7 @@ public class ConnectionWithFacebook extends AppCompatActivity {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 FirebaseUser user = firebaseAuth.getCurrentUser();
-                if(user != null){
-                    updateUI(user);
-                }else{
-                    updateUI(null);
-                }
+                updateUI(user);
             }
         };
 
