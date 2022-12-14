@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="colorPrimary">#282C33</color>
+    <color name="colorPrimaryDark">#289b35</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="primary">#1B023B</color>
+    <color name="night_mode">#6124B1</color>
+    <color name="secondary">#FF03DAC5</color>
+
+
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
@@ -19,5 +27,22 @@
     <color name="event_20">#282C3399</color>
     <color name="notification_20">#33AE7E0F</color>
     <color name="profile_20">#335B37B7</color>
+
+    <color name="smokyWhite">#fafafa</color>
+    <color name="lightText">#c9d3f7</color>
+    <color name="hintColor">#b7c1e4</color>
+    <color name="searchBarColor">#0023a1</color>
+    <color name="greenBtnColor">#48ceb9</color>
+    <color name="lightBlue">#e6f2ff</color>
+    <color name="textBlue">#268eff</color>
+    <color name="deepBlue">#425186</color>
+    <color name="greyDate">#cdcfd1</color>
+    <color name="timeBackgroundGreen">#e8feed</color>
+    <color name="greenJoinBtnColor">#00bb5a</color>
+    <color name="lightGrey">#D8D8D8</color>
+
+    <color name="notifications">#13B2C3</color>
+    <color name="private_account">#E6A326</color>
+    <color name="security">#D95F69</color>
 
 </resources>

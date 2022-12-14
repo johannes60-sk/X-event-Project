@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0b1013"
+    tools:context=".otp.otpConnexion">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="322dp"
+        android:src="@drawable/otp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <EditText
+            android:id="@+id/mobileET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="6dp"
+            android:backgroundTint="#808080"
+            android:hint="Enter Mobile Number"
+            android:importantForAutofill="no"
+            android:inputType="phone"
+            android:maxLines="1"
+            android:paddingStart="20dp"
+            android:paddingEnd="0dp"
+            android:textColor="@color/white"
+            android:textColorHint="#808080" />
+
+        <EditText
+            android:id="@+id/otpET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="6dp"
+            android:backgroundTint="#808080"
+            android:layout_marginTop="20dp"
+            android:hint="Enter OTP"
+            android:paddingStart="20dp"
+            android:paddingEnd="0dp"
+            android:textColor="@color/white"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:textColorHint="#808080"
+            android:maxLines="1"
+            android:visibility="gone" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/otpButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            android:text="Send Otp" />
+    </LinearLayout>
+
+</LinearLayout>
